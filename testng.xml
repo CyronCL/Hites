@@ -3,10 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.selenium.test.Test01"/>
       <class name="com.selenium.test.Test02"/>
-      <class name="com.selenium.test.Test01"/>
-      <class name="com.selenium.test.Test03"/>
-      <class name="com.selenium.test.Test01"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

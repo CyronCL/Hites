@@ -15,13 +15,7 @@ public class Test01 extends BaseConfig {
     // create instance HomePage
     HomePage homePage = new HomePage(driver);
     // search sku method in page (HomePage)
-    PDPPage pdpPage = homePage.searchSKU(product.getSku());
-    // Add sku to cart
-    pdpPage.clickAddToCart();
-    // To Go CartPage
-    CartPape cartPage = pdpPage.clickGoToCart();
-    // Valid Product add in cart
-    cartPage.validCartItem();
+    homePage.cerrar();
   }
 } 
  

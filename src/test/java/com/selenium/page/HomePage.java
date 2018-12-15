@@ -22,6 +22,9 @@ public class HomePage extends BaseConfig {
   @FindBy(xpath = "//div[@class='searchIcon_-xI-Ide9']")
   private WebElement searchIconBtn; 
   
+  @FindBy(xpath = "(//*[@onclick='closePopUp();'])[2]")
+  private WebElement cerrar;
+  
   //create method
   
   public PDPPage searchSKU(String producto) {
@@ -34,5 +37,11 @@ public class HomePage extends BaseConfig {
     searchBoxInpt.sendKeys("111338-0");
     searchIconBtn.click();
     return new PDPPage(driver);
-  }
+ }
+  public void cerrar()
+  {
+	  
+	   cerrar.click();
+	  
+	    }  
 }

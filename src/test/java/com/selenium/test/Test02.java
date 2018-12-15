@@ -14,8 +14,5 @@ public class Test02 extends BaseConfig {
   public void example02(Producto product) {
     HomePage homePage = new HomePage(driver);
     PDPPage pdpPage = homePage.searchProduct();
-    pdpPage.clickAddToCart();
-    CartPape cartPage = pdpPage.clickGoToCart();
-    cartPage.validCartItem();
   } 
 }
