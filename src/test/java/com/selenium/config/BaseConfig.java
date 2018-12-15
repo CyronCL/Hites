@@ -1,5 +1,6 @@
 package com.selenium.config;
 
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +13,8 @@ public class BaseConfig {
 
   @BeforeMethod()
   public void getDriver() {
-    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+	String path = Paths.get(System.getProperty("user.dir"), "driver/chromedriver").toString();
+    System.setProperty("webdriver.chrome.driver", path);
     driver = new ChromeDriver();
     //
     driver.manage().deleteAllCookies();
