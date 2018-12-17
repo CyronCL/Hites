@@ -4,6 +4,7 @@ import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,11 +16,16 @@ public class BaseConfig {
   public void getDriver() {
 	
     System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
-    driver = new ChromeDriver();
+    ChromeOptions option = new ChromeOptions();
+    option.addArguments("--headless");
+    option.addArguments("--no-sandbox");
+    option.addArguments("--disable-dev-shm-usage");//
+    driver = new ChromeDriver(option);
     //
     driver.manage().deleteAllCookies();
     driver.navigate().to("https://www.sodimac.cl/sodimac-cl/");
     //
+    
     System.out.println("Successfully opened the website https://www.sodimac.cl/sodimac-cl/");
     driver.manage().window().maximize();
     driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
