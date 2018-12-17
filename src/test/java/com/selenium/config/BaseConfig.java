@@ -13,8 +13,8 @@ public class BaseConfig {
 
   @BeforeMethod()
   public void getDriver() {
-	String path = Paths.get(System.getProperty("user.dir"), "driver/chromedriver").toString();
-    System.setProperty("webdriver.chrome.driver", path);
+	
+    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
     driver = new ChromeDriver();
     //
     driver.manage().deleteAllCookies();
