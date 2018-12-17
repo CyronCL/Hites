@@ -13,6 +13,5 @@ public class Test02 extends BaseConfig {
   @Test(dataProvider = "productSodimac", dataProviderClass = IntegratedDataProvider.class )
   public void example02(Producto product) {
     HomePage homePage = new HomePage(driver);
-    PDPPage pdpPage = homePage.searchProduct();
   } 
 }
