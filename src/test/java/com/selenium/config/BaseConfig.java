@@ -13,7 +13,7 @@ public class BaseConfig {
 
   @BeforeMethod()
   public void getDriver() {
-	String path = Paths.get(System.getProperty("user.dir"), "driver/chromedriver.exe").toString();
+	String path = Paths.get(System.getProperty("user.dir"), "driver/chromedriver").toString();
     System.setProperty("webdriver.chrome.driver", path);
     driver = new ChromeDriver();
     //
