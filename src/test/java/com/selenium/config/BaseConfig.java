@@ -14,20 +14,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseConfig {
 
-  public RemoteWebDriver driver;
+  public WebDriver driver;
 
-  @BeforeMethod()
+  @BeforeMethod()/*
    public RemoteWebDriver getDriver() throws Exception {
     if (driver == null) {
 
       DesiredCapabilities browser = new DesiredCapabilities();
       
-      /*
-      Response response = given().get(urlPage);
-      int statusCode = response.getStatusCode();
-      StatusCodeWebSite site = new StatusCodeWebSite();
-      site.testStatusUrl(statusCode);
-      */
+
       browser.setBrowserName("chrome");
       browser.setVersion("latest");
       browser.setCapability("name", "https://www.sodimac.cl/sodimac-cl/" + " Test:" + getClass().getSimpleName());
@@ -46,16 +41,16 @@ public class BaseConfig {
       }
     }
     return driver;
-  }
+  }*/
   
   
- /* public void getDriver() {
+  public void getDriver() {
 	
-    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
     ChromeOptions option = new ChromeOptions();
-    option.addArguments("--headless");
+   /* option.addArguments("--headless");
     option.addArguments("--no-sandbox");
-    option.addArguments("--disable-dev-shm-usage");//
+    option.addArguments("--disable-dev-shm-usage");*/
     driver = new ChromeDriver(option);
     //
     driver.manage().deleteAllCookies();
@@ -66,7 +61,7 @@ public class BaseConfig {
     driver.manage().window().maximize();
     driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }*/
+  }
 
   @AfterMethod()
   public void teardownTest() {
