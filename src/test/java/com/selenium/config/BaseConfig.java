@@ -46,7 +46,7 @@ public class BaseConfig {
   
   public void getDriver() {
 	
-    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
     ChromeOptions option = new ChromeOptions();
    /* option.addArguments("--headless");
     option.addArguments("--no-sandbox");
