@@ -33,8 +33,11 @@ public class BaseConfig {
       browser.setCapability("name", "https://www.sodimac.cl/sodimac-cl/" + " Test:" + getClass().getSimpleName());
       browser.setCapability("enableVNC", true);
       browser.setCapability("enableVideo", false);
+      browser.setCapability ("webdriver.chrome.verboseLogging", true);
+      browser.setCapability ("--no-sandbox",true);
+      browser.setCapability ("--disable-dev-shm-usage",true);
       try {
-        driver = new RemoteWebDriver(URI.create("http://10.8.72.198:4444/wd/hub").toURL(), browser);
+        driver = new RemoteWebDriver(URI.create("http://192.168.1.110:4444/wd/hub").toURL(), browser);
         driver.manage().window().maximize();
         driver.get("https://www.sodimac.cl/sodimac-cl/");
       } catch (MalformedURLException e) {
