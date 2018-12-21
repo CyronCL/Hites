@@ -48,9 +48,9 @@ public class BaseConfig {
 	
     System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
     ChromeOptions option = new ChromeOptions();
-    option.addArguments("--headless");    
+    /*option.addArguments("--headless");    
     option.addArguments("--disable-dev-shm-usage");
-    option.addArguments("--no-sandbox");
+    option.addArguments("--no-sandbox");*/
     driver = new ChromeDriver(option);
     //
     driver.manage().deleteAllCookies();
