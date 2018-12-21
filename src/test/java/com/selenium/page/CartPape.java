@@ -9,7 +9,7 @@ import com.selenium.config.BaseConfig;
 
 public class CartPape extends BaseConfig {
 
-  public CartPape(WebDriver   driver) {
+  public CartPape(RemoteWebDriver   driver) {
     super();
     this.driver = driver;
     PageFactory.initElements(driver, this);

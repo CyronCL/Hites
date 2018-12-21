@@ -12,7 +12,7 @@ import com.selenium.config.BaseConfig;
 
 public class PDPPage extends BaseConfig {
 
-  public PDPPage(WebDriver  driver) {
+  public PDPPage(RemoteWebDriver  driver) {
     super();
     this.driver = driver;
     PageFactory.initElements(driver, this);

@@ -9,7 +9,7 @@ import com.selenium.config.BaseConfig;
 
 public class HomePage extends BaseConfig {
 
-  public HomePage(WebDriver  driver) {
+  public HomePage(RemoteWebDriver  driver) {
     super();
     this.driver = driver;
     PageFactory.initElements(driver, this);
