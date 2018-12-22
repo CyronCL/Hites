@@ -24,13 +24,10 @@ public class BaseConfig {
       
 
       browser.setBrowserName("chrome");
-      browser.setVersion("latest");
+      browser.setVersion("70.0");
       browser.setCapability("name", "https://www.sodimac.cl/sodimac-cl/" + " Test:" + getClass().getSimpleName());
       browser.setCapability("enableVNC", true);
       browser.setCapability("enableVideo", false);
-      browser.setCapability ("webdriver.chrome.verboseLogging", true);
-      browser.setCapability ("--no-sandbox",true);
-      browser.setCapability ("--disable-dev-shm-usage",true);
       try {
         driver = new RemoteWebDriver(URI.create("http://127.0.0.1:4444/wd/hub").toURL(), browser);
         driver.manage().window().maximize();
